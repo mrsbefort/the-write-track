@@ -55,16 +55,16 @@ const promptUser = () => {
 function writeToFile(fileName, data) {}
 const createFile = util.promisify(fs.writeFile);
 // TODO: Create a function to initialize app
-function init() {}
+
 async function init() {
     try {
         const data = await promptUser();
-        const createContent = ReadMeTemplate(data);
+        const createContent = generateMarkdown(data);
 
         await createFile('./sample/README.md', createContent);
         console.log('Successfully created README.md');
     } catch(err) {
-      
+      console.log(err);
     }
 };
 // Function call to initialize app
