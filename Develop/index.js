@@ -30,18 +30,13 @@ const promptUser = () => {
         {
             type:'input',
             name:'usage',
-            message:'Provide instructions and examples for use. Include screenshots as needed:'
-        },
-        {
-            type:'input',
-            name:'credits',
-            message:'List your collaborators, if any. If none, skip or type "N/A":'
+            message:'Provide instructions'
         },
         {
             type:'list',
             name:'license',
             message:'Choose the license for this project:',
-            choices: ['inquirer', 'fs', 'util']
+            choices: ['inquirer', 'fs', 'util', 'Isc']
         },
         {
             type:'input',
@@ -69,7 +64,7 @@ async function init() {
         await createFile('./sample/README.md', createContent);
         console.log('Successfully created README.md');
     } catch(err) {
-        console.log(err);
+      
     }
 };
 // Function call to initialize app
