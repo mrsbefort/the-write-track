@@ -1,0 +1,14 @@
+{
+  "name": "Read Me",
+  "version": "1.0.0",
+  "description": "I'm a ReadMe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabrielle Befort",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  }
+}
