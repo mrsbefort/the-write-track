@@ -1,5 +1,5 @@
 //Function name
-function ReadMeTemplate(data) {
+function readMeTemplate(data) {
     return `
 <h1 align="center">${data.projectTitle}</h1>
 <h2 align="center">By: Gabrielle Befort</h2>
@@ -33,12 +33,12 @@ ${data.test}
 
 ## Questions
 Contact me with any questions by shooting me an email at ${data.questions} 
-${date.username}
+${data.username}
 
 
 `;}
 
-module.exports = ReadMeTemplate; 
+module.exports = readMeTemplate; 
 
 
 

@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const generateMarkdown = require("./utils/generateMarkdown");
+const readMeTemplate = require("../readMeTemplate");
 // TODO: Create an array of questions for user input
 const questions = [];
 const promptUser = () => {
@@ -59,7 +59,7 @@ const createFile = util.promisify(fs.writeFile);
 async function init() {
     try {
         const data = await promptUser();
-        const createContent = generateMarkdown(data);
+        const createContent = readMeTemplate(data);
 
         await createFile('./sample/README.md', createContent);
         console.log('Successfully created README.md');
