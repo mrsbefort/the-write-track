@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const readMeTemplate = require("../readMeTemplate");
+const readMeTemplate = require("./utils/readMeTemplate");
 // TODO: Create an array of questions for user input
 const questions = [];
 const promptUser = () => {
